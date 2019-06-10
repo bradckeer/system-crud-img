@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/*
+.fa-chevron-right{
+    display: inline-block;
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    transform: rotate(0deg);
+    transition: -webkit-transform 0.2s ease-in-out;
+}
+
+.fa-chevron-right:active {
+    transform: rotate(90deg);
+}*/
+
+.table>tbody>tr>td {
+    vertical-align: middle;
+}
