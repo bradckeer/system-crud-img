@@ -71,6 +71,23 @@ class inventory
         
     }
   }
+
+
+  public function getFilterArticle($data){
+    $this->data = $data;
+    $db = new ConexionDB();
+    $sql = $db->query("SELECT A.* FROM inventory A WHERE A.descrip_product LIKE '%$this->data%' OR A.marc_product LIKE '%$this->data%' OR A.model_product LIKE '%$this->data%' OR A.serial_product LIKE '%$this->data%' OR A.bill_num LIKE '%$this->data%' OR A.cost_center LIKE '%$this->data%'");
+    if ($sql->num_rows > 0) {
+      while ($res = $sql->fetch_assoc()){        
+        $data = $res;          
+      }  
+      echo json_encode($data);
+
+    } else {
+      $arrayName = array('success' => 'no encontrado');
+      echo json_encode($arrayName);
+    }
+  }
 }
 
 

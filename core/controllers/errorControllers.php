@@ -1,1 +1,1 @@
-<?php echo 'No se encontró la página'; ?>
+<h1><i class="fas fa-bomb fa-10x"></i>No se encontró la página<i class="fas fa-bomb fa-10x"> </h1>

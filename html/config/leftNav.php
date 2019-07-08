@@ -21,6 +21,9 @@
             <li>
               <a class="menu-item" href="?view=stock" data-i18n=""><i class="fas fa-box"></i>&nbsp&nbsp Escanear activo</a>
             </li>
+            <li>
+              <a class="menu-item" href="?view=printAllQRcode" data-i18n=""><i class="fas fa-print"></i>&nbsp&nbsp Imprimir activo</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Otro item</span></a>
@@ -53,7 +56,7 @@
     </div>
 </div>
  <script>
- /* const ul = document.querySelector('#status');
+/* const ul = document.querySelector('#status');
  
  ul.addEventListener('click', active);
 
@@ -67,6 +70,6 @@
     e.path[1].setAttribute('class', 'active');
     console.log(ul.children); 
     
-  } 
-  */
+  }  */
+
  </script>

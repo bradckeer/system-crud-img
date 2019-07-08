@@ -33,7 +33,10 @@
             </div>
             <div class="card-content collapse show">
                 <div class="card-body card-dashboard ">
-                  <p class="card-text">Total de items: <span class="badge badge-pill badge-info bg-primary text-white p-1" id="totalList"></span > 
+                  <p class="card-text">Total de items: <span class="badge badge-pill badge-info bg-primary text-white p-1" id="totalList"></span >
+                  <form id="filter-item" method="post">
+                    <input class="float-right" type="search" name="search-item" id="search-item" value="" placeholder="Buscar..." >
+                  </form>
                 </div>
                 <div class="table-responsive pl-2 pr-2">
                     <table class="table mb-0" id="table">
@@ -56,4 +59,5 @@
       </div>
     </div>
   </div>
+  <script src="views/assets/js/scripts/qrcode/qrcode.js"></script>
   <script src="views/app/js/store/assets.js"></script>

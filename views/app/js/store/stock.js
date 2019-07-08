@@ -116,7 +116,7 @@ async function getArticleUnic(e){
                             <div class="card d-flex">
                                 <div class="row d-flex justify-content-center align-items-center align-self-center" style="position: relative;">
                                     <div class="card-body">
-                                        <img class="img-fluid rounded mx-auto d-block " src="https://api.qrserver.com/v1/create-qr-code/?data=${data.code_qr}&size=180x180" alt="${data.descrip_product}" height="180" width="180" style="margin-top: 60%;">
+                                        <img class="img-fluid rounded mx-auto d-block " src="https://api.qrserver.com/v1/create-qr-code/?data=${data.code_qr}&size=180x180" alt="" height="180" width="180" style="margin-top: 60%;">
                                     </div>
                                 </div>
                             </div>
