@@ -20,7 +20,8 @@ async function getArticleUnic(e){
             })
                 .then(res => res.json())
                 .then(data => {
-
+                    //console.log(data);
+                    
                     if (data === false) {
                         respuesta.setAttribute('class', 'text-danger');
                         respuesta.innerHTML = '<i class="fas fa-exclamation-triangle"></i> El código es incorrecto';
@@ -110,6 +111,8 @@ async function getArticleUnic(e){
                                         <dd class="col-sm-9">${departament} <p class="text-info">${responsable}</p></dd>
                                         <dt class="col-sm-3">Estatus:</td>
                                         <dd class="col-sm-9 ${estado}">${status}</dd>
+                                        <dt class="col-sm-3">Usuario:</td>
+                                        <dd class="col-sm-9"${estado} >${data.usuario}</dd>
                                     </dl>               
                                 </div>
                             </div>

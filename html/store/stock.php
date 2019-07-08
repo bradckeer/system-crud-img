@@ -6,9 +6,9 @@
           <div class="row breadcrumbs-top d-inline-block">
             <div class="breadcrumb-wrapper col-12">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="?view=index">Home</a>
+                <li class="breadcrumb-item"><a href="?view=inventory">Home</a>
                 </li>
-                <li class="breadcrumb-item"><a href="?view=assets">Page</a>
+                <li class="breadcrumb-item"><a href="?view=inventory">Page</a>
                 </li>
                 <li class="breadcrumb-item active">Buscar de activo
                 </li>

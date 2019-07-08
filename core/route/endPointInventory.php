@@ -19,8 +19,9 @@ if($_POST){
     $amount = number_format($_POST["amount"], 2, '.', '');
     $conditionNew = $_POST["condition-new"];
     $conditionUsed = $_POST["condition-used"];
+    $usuario = $_POST["usuario"];
     
-    if ($descripProduct !== '' && $marcProduct !== '' && $modelProduct !== '' && $serialProduct !== '' && $selectCategory !== '' && $datePurchase !== '' && $billNum !== '' && $quantity !== '' && $selectDepartment !== '' && $costCenter !== '' && $warrantyDate !== '' && $amount !== '') {
+    if ($descripProduct !== '' && $marcProduct !== '' && $modelProduct !== '' && $serialProduct !== '' && $selectCategory !== '' && $datePurchase !== '' && $billNum !== '' && $quantity !== '' && $selectDepartment !== '' && $costCenter !== '' && $warrantyDate !== '' && $amount !== '' && $usuario !== '') {
         
 
         $db = new ConexionDB();
@@ -33,6 +34,8 @@ if($_POST){
         $marcProduct = $db->real_escape_string(mb_convert_case($marcProduct, MB_CASE_UPPER, "UTF-8"));
         $modelProduct = $db->real_escape_string(mb_convert_case($modelProduct, MB_CASE_UPPER, "UTF-8"));
         $serialProduct = $db->real_escape_string(mb_convert_case($serialProduct, MB_CASE_UPPER, "UTF-8"));
+        $usuario = $db->real_escape_string(mb_convert_case($usuario, MB_CASE_UPPER, "UTF-8"));
+
         $selectCategory = $db->real_escape_string($selectCategory);
         $datePurchase = $datePurchase;
         $billNum = $db->real_escape_string(mb_convert_case($billNum, MB_CASE_UPPER, "UTF-8"));
@@ -41,6 +44,7 @@ if($_POST){
         $costCenter = $db->real_escape_string(mb_convert_case($costCenter, MB_CASE_UPPER, "UTF-8"));
         $warrantyDate = $warrantyDate;
         $amount = $db->real_escape_string($amount);
+
 
         $codeQr = mb_convert_case(trim($serialProduct).md5($registerDate), MB_CASE_UPPER);
         
@@ -71,10 +75,11 @@ if($_POST){
                 register_date,
                 code_qr,
                 new_or_used,
-                status_availability
-                )VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                status_availability,
+                usuario
+                )VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
-            $stmt->bind_param("ssssissiissdsssii", $descripProduct, $marcProduct, $modelProduct, $serialProduct, $selectCategory, $datePurchase, $billNum, $quantity, $selectDepartment, $costCenter, $warrantyDate, $amount, $userImg, $registerDate, $codeQr, $ArticleCondition, $status_availability);
+            $stmt->bind_param("ssssissiissdsssiis", $descripProduct, $marcProduct, $modelProduct, $serialProduct, $selectCategory, $datePurchase, $billNum, $quantity, $selectDepartment, $costCenter, $warrantyDate, $amount, $userImg, $registerDate, $codeQr, $ArticleCondition, $status_availability, $usuario);
 
             $stmt->execute();
             $ultimateIdInsert = $db->insert_id;
@@ -113,7 +118,8 @@ if($_POST){
                 select_department,
                 cost_center,
                 warranty_date,
-                amount 
+                amount,
+                usuario
                 FROM inventory
                 WHERE id_inventory = ?");
             $stmt->bind_param("i", $id);

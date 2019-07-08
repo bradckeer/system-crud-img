@@ -6,9 +6,9 @@
           <div class="row breadcrumbs-top d-inline-block">
             <div class="breadcrumb-wrapper col-12">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="?view=index">Home</a>
+                <li class="breadcrumb-item"><a href="?view=inventory">Home</a>
                 </li>
-                <li class="breadcrumb-item"><a href="?view=assets">Page</a>
+                <li class="breadcrumb-item"><a href="?view=inventory">Page</a>
                 </li>
                 <li class="breadcrumb-item active">Ingreso de activo
                 </li>
@@ -164,6 +164,15 @@
                             </div>
                             <input type="number" class="form-control" name="amount" id="amount" placeholder="Monto" step="0.01" min="0.01" require>
                           </div> 
+                        </div>
+                        <div class="form-group col-12">
+                          <label for="amount">Usuario</label>
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-user"></i></div>
+                              </div>
+                              <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ususario"  require>
+                            </div> 
                         </div>
                       </div>
                       <div class="page__toggle">

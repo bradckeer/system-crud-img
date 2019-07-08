@@ -27,4 +27,7 @@
 <!-- BEGIN PAGE LEVEL JS-->
 <script src="views/assets/js/scripts/forms/wizard-steps.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS-->
+<!-- BEGIN PRINT JS -->
+<script src="views/assets/js/core/print.js"></script>
 
+<!-- END PRINT JS -->
